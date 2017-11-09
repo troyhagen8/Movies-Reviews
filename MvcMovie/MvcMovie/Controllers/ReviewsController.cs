@@ -42,12 +42,19 @@ namespace MvcMovie.Controllers
         // GET: Reviews/Create
         public IActionResult Create(int id)
         {
+
+            if (id == 0)
+            {
+                return NotFound();
+            }
+
             Review review = new Review
             {
                 MovieID = id
             };
 
             return View(review);
+        
         }
 
         // POST: Reviews/Create

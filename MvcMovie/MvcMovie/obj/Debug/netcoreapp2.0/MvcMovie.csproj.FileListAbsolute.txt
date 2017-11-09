@@ -20,3 +20,14 @@ C:\Users\Troy Hagen\Documents\Stockton University\Web App\MvcMovieReviews\MvcMov
 C:\Users\Troy Hagen\Documents\Stockton University\Web App\MvcMovieReviews\MvcMovie\MvcMovie\obj\Debug\netcoreapp2.0\MvcMovie.AssemblyInfo.cs
 C:\Users\Troy Hagen\Documents\Stockton University\Web App\MvcMovieReviews\MvcMovie\MvcMovie\obj\Debug\netcoreapp2.0\MvcMovie.dll
 C:\Users\Troy Hagen\Documents\Stockton University\Web App\MvcMovieReviews\MvcMovie\MvcMovie\obj\Debug\netcoreapp2.0\MvcMovie.pdb
+C:\Users\hagent2\Documents\MVCMoviesReviews\MvcMovie\MvcMovie\bin\Debug\netcoreapp2.0\MvcMovie.deps.json
+C:\Users\hagent2\Documents\MVCMoviesReviews\MvcMovie\MvcMovie\bin\Debug\netcoreapp2.0\MvcMovie.runtimeconfig.json
+C:\Users\hagent2\Documents\MVCMoviesReviews\MvcMovie\MvcMovie\bin\Debug\netcoreapp2.0\MvcMovie.runtimeconfig.dev.json
+C:\Users\hagent2\Documents\MVCMoviesReviews\MvcMovie\MvcMovie\bin\Debug\netcoreapp2.0\MvcMovie.dll
+C:\Users\hagent2\Documents\MVCMoviesReviews\MvcMovie\MvcMovie\bin\Debug\netcoreapp2.0\MvcMovie.pdb
+C:\Users\hagent2\Documents\MVCMoviesReviews\MvcMovie\MvcMovie\obj\Debug\netcoreapp2.0\MvcMovie.csprojResolveAssemblyReference.cache
+C:\Users\hagent2\Documents\MVCMoviesReviews\MvcMovie\MvcMovie\obj\Debug\netcoreapp2.0\MvcMovie.csproj.CoreCompileInputs.cache
+C:\Users\hagent2\Documents\MVCMoviesReviews\MvcMovie\MvcMovie\obj\Debug\netcoreapp2.0\MvcMovie.AssemblyInfoInputs.cache
+C:\Users\hagent2\Documents\MVCMoviesReviews\MvcMovie\MvcMovie\obj\Debug\netcoreapp2.0\MvcMovie.AssemblyInfo.cs
+C:\Users\hagent2\Documents\MVCMoviesReviews\MvcMovie\MvcMovie\obj\Debug\netcoreapp2.0\MvcMovie.dll
+C:\Users\hagent2\Documents\MVCMoviesReviews\MvcMovie\MvcMovie\obj\Debug\netcoreapp2.0\MvcMovie.pdb
