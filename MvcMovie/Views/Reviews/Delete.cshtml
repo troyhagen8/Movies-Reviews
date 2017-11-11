@@ -12,12 +12,6 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.MovieID)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.MovieID)
-        </dd>
-        <dt>
             @Html.DisplayNameFor(model => model.ReviewerName)
         </dt>
         <dd>
@@ -33,7 +27,7 @@
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="ReviewID" />
-        <input type="submit" value="Delete" class="btn btn-default" /> |
-        <a asp-action="Index">Back to List</a>
+        <input type="submit" value="Delete" class="btn btn-default" />
+        <a asp-action="Details" asp-controller="Movies" asp-route-id="@Model.MovieID" class="btn btn-default">Cancel</a>
     </form>
 </div>

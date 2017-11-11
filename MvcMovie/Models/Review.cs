@@ -11,7 +11,7 @@ namespace MvcMovie.Models
     
         public int MovieID { get; set; }
 
-        [Display(Name="Your name")]
+        [Display(Name="Reviewer")]
         public String ReviewerName { get; set; }
 
         public String Comment { get; set; }

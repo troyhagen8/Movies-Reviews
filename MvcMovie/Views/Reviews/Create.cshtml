@@ -13,7 +13,7 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-            <input @*type="hidden"*@ asp-for="MovieID"/>
+            <input type="hidden" asp-for="MovieID"/>
             </div>
             <div class="form-group">
                 <label asp-for="ReviewerName" class="control-label"></label>
@@ -33,7 +33,7 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Details" asp-controller="Movies" asp-route-id="@Model.MovieID" class="btn btn-default">Cancel</a>
 </div>
 
 @section Scripts {
