@@ -60,14 +60,20 @@ namespace MvcMovie.Controllers
                 return NotFound();
             }
 
+            var review = from m in _context.Review
+                            select m;
+
+            review = review.Where(x => x.MovieID == id);
+
             var movie = await _context.Movie
                 .SingleOrDefaultAsync(m => m.ID == id);
-            if (movie == null)
-            {
-                return NotFound();
-            }
 
-            return View(movie);
+
+            var movieDetails = new MovieDetailsModel();
+            movieDetails.reviews = await review.ToListAsync();
+            movieDetails.movie = movie;
+
+            return View(movieDetails);
         }
 
         // GET: Movies/Create

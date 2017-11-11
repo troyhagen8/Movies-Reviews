@@ -15,30 +15,6 @@ namespace MvcMovie.Controllers
             _context = context;
         }
 
-        // GET: Reviews
-        public async Task<IActionResult> Index()
-        {
-            return View(await _context.Review.ToListAsync());
-        }
-
-        // GET: Reviews/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var review = await _context.Review
-                .SingleOrDefaultAsync(m => m.ReviewID == id);
-            if (review == null)
-            {
-                return NotFound();
-            }
-
-            return View(review);
-        }
-
         // GET: Reviews/Create
         public IActionResult Create(int id)
         {
@@ -61,7 +37,7 @@ namespace MvcMovie.Controllers
             {
                 _context.Add(review);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Details","Movies",new { id = review.MovieID});
             }
             return View(review);
         }
@@ -87,7 +63,7 @@ namespace MvcMovie.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,MovieID,ReviewerName,Comment")] Review review)
+        public async Task<IActionResult> Edit(int id, [Bind("ReviewID,MovieID,ReviewerName,Comment")] Review review)
         {
             if (id != review.ReviewID)
             {
@@ -112,7 +88,7 @@ namespace MvcMovie.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Details", "Movies", new { id = review.MovieID });
             }
             return View(review);
         }
@@ -143,7 +119,7 @@ namespace MvcMovie.Controllers
             var review = await _context.Review.SingleOrDefaultAsync(m => m.ReviewID == id);
             _context.Review.Remove(review);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Details", "Movies", new { id = review.MovieID });
         }
 
         private bool ReviewExists(int id)

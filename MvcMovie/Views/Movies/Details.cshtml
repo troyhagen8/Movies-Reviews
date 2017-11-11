@@ -1,4 +1,4 @@
-﻿@model MvcMovie.Models.Movie
+﻿@model MvcMovie.Models.MovieDetailsModel
 
 @{
     ViewData["Title"] = "Details";
@@ -11,33 +11,59 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Title)
+            @Html.DisplayNameFor(model => model.movie.Title)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Title)
+            @Html.DisplayFor(model => model.movie.Title)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.ReleaseDate)
+            @Html.DisplayNameFor(model => model.movie.ReleaseDate)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.ReleaseDate)
+            @Html.DisplayFor(model => model.movie.ReleaseDate)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Genre)
+            @Html.DisplayNameFor(model => model.movie.Genre)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Genre)
+            @Html.DisplayFor(model => model.movie.Genre)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Price)
+            @Html.DisplayNameFor(model => model.movie.Price)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Price)
+            @Html.DisplayFor(model => model.movie.Price)
         </dd>
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
+    <a asp-action="Edit" asp-route-id="@Model.movie.ID">Edit</a> |
     <a asp-action="Index">Back to List</a> |
-    <a asp-action="Create" asp-controller="Reviews" asp-route-id="@Model.ID">Write a Review</a>
+    <a asp-action="Create" asp-controller="Reviews" asp-route-id="@Model.movie.ID">Write a Review</a>   
 </div>
+
+<table>
+    <tbody>
+        <tr>
+            <th><h4>Reviews</h4></th>
+        </tr>
+        @foreach (var item in Model.reviews)
+        {
+            <tr>
+                <td>
+                    <p>@Html.DisplayFor(modelItem => item.Comment)</p>
+                    - @Html.DisplayFor(modelItem => item.ReviewerName)
+                    <hr />
+
+                </td>
+                <td>
+                <td>
+                    <a asp-action="Edit" asp-controller="Reviews" asp-route-id="@item.ReviewID">Edit</a> |
+                    <a asp-action="Delete" asp-controller="Reviews" asp-route-id="@item.ReviewID">Delete</a>
+                </td>
+            </tr>
+
+        }
+    </tbody>
+</table>
+
